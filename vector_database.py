@@ -1,6 +1,4 @@
 import faiss
-import numpy as np
-import embedding
 import json
 
 
