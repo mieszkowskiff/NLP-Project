@@ -13,9 +13,5 @@ def get_section_text(page_title: str, section_title: str) -> str:
     return section.text
 
 
-
-
-
-
 if __name__ == "__main__":
     print(len(get_section_text("Python (programming language)", "Design philosophy and features")))

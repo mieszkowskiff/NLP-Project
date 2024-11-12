@@ -3,23 +3,6 @@ import numpy as np
 import embedding
 import json
 
-# Sample embeddings and metadata
-texts = ["apple", "truck", "castle"]
-embeddings = np.array([embedding.embedding(text) for text in texts])
-
-print(embeddings.shape)
-
-# Create a Faiss index
-index = faiss.IndexFlatL2(embeddings.shape[1])
-
-# Perform a similarity search
-query_text = "car"
-query_vector = np.array(embedding.embedding(query_text))
-distances, indices = index.search(query_vector.reshape(1, -1), 3)
-
-# Retrieve the top 2 most similar documents and their metadata
-print(distances, indices)
-
 
 class VectorDatabaseWraper:
     def __init__ (self, folder_path = None, embedding_size = 1536):
@@ -44,8 +27,6 @@ class VectorDatabaseWraper:
         distances, indices = self.index.search(query_vector.reshape(1, -1), k)
         return distances, indices
 
-
-        
     
         
     
