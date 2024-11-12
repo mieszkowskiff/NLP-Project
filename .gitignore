@@ -1,4 +1,4 @@
 .venv/
 chroma_db/
 __pycache__/
-database/
+python_wikipedia_database/

@@ -23,7 +23,7 @@ class VectorDatabaseWraper:
 
     def search(self, query_vector, k):
         distances, indices = self.index.search(query_vector.reshape(1, -1), k)
-        return distances, indices
+        return [self.metadata[i] for i in indices[0]], distances[0]
 
     
         
