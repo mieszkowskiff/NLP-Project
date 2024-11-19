@@ -7,5 +7,3 @@ def embedding(texts: list[str]) -> np.ndarray:
         api_key="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"
     ).embed_query(text) for text in texts])
 
-if __name__ == "__main__":
-    print(embedding(["Hello, World!", "Goodbye, World!"]).shape)

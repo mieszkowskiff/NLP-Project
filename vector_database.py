@@ -1,5 +1,6 @@
 import faiss
 import json
+import numpy as np
 
 
 class VectorDatabaseWraper:
@@ -17,14 +18,20 @@ class VectorDatabaseWraper:
         with open(f"{folder_path}/metadata.json", 'w') as outfile:
             json.dump(self.metadata, outfile)
 
-    def add(self, embeddings, metadatas):
-        self.index.add(embeddings)
-        self.metadata.extend(metadatas)
+    def add(self, embeddings, metadata):
+        if len(embeddings) == 0:
+            return
+        self.index.add(np.array(embeddings))
+        self.metadata.extend(metadata)
 
     def search(self, query_vector, k):
         distances, indices = self.index.search(query_vector.reshape(1, -1), k)
         return [self.metadata[i] for i in indices[0]], distances[0]
-
     
+    def has_record(self, metadata):
+        return metadata in self.metadata
+
+
+ 
         
     
