@@ -20,9 +20,13 @@ class WikiRAG:
         self.model_name = model_name
         self.documents_retrieved = documents_retrieved
 
+    def db_search(self, input_: str):
+        emb = embedding.embedding([input_])[0]
+        search_results, likeness = self.db.search(emb, self.documents_retrieved)
+        return search_results, likeness
+
     def wikipedia_retriever(self, input_: dict) -> str:
-            emb = embedding.embedding([input_])[0]
-            search_results, likeness = self.db.search(emb, self.documents_retrieved)
+            search_results, _ = self.db_search(input_)
             documents = []
             for result in search_results:
                 section_text = wikipedia.get_section_text(result['page_title'], 
