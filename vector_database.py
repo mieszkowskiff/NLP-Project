@@ -1,6 +1,7 @@
 import faiss
 import json
 import numpy as np
+import time
 
 
 class VectorDatabaseWraper:
@@ -25,7 +26,10 @@ class VectorDatabaseWraper:
         self.metadata.extend(metadata)
 
     def search(self, query_vector, k):
+        start_time = time.time()
         distances, indices = self.index.search(query_vector.reshape(1, -1), k)
+        print(f"""Time of searching: {time.time() - start_time}, {k} nearest neighbours found
+              in the database of {len(self.metadata)} records""")
         return [self.metadata[i] for i in indices[0]], distances[0]
     
     def has_record(self, metadata):
