@@ -1,0 +1,21 @@
+,difficulty,type,question,base_model,ollama3.1:8b,wikiRAG
+0,easy,characters,What is the name of Luke Skywalker's twin sister?,-2,0,2
+1,medium,characters,Who was Cassian Andor's adoptive mother in the Andor series?,-2,-2,-2
+2,medium,characters,"In The Acolyte, what is the name of the character(s) played by Amandla Stenberg?",-2,-2,-2
+3,easy,characters,"What species is Chewbacca, and where is he from?",2,2,-2
+4,medium,characters,What was the title held by Padmé Amidala on Naboo before becoming a senator?,1,2,1
+5,easy,worldbuilding,What is the name of the desert planet where Anakin Skywalker grew up?,1,2,-1
+6,medium,worldbuilding,"What is the name of the planet where the Jedi Order built their temple, later used as the Galactic Empire's headquarters?",-2,2,2
+7,hard,worldbuilding,"In The Mandalorian, what is the significance of the Darksaber to Mandalorian culture?",1,2,-2
+8,easy,worldbuilding,What is the primary weapon of a Jedi Knight?,2,2,2
+9,easy,reallife,Who directed The Empire Strikes Back?,2,2,-2
+10,medium,reallife,What was the name of the groundbreaking visual effects company founded to work on Star Wars in 1975?,2,2,-2
+11,hard,reallife,"How did The Mandalorian utilize ""StageCraft"" technology to revolutionize production techniques?",0,2,0
+12,easy,reallife,Which actress played Princess Leia Organa in the original trilogy?,1,2,2
+13,medium,reallife,What was the fan response to the introduction of midichlorians in The Phantom Menace?,1,2,-2
+14,hard,trivia,What was the first Star Wars animated series to be considered part of the official Disney canon after the Lucasfilm acquisition?,2,2,-2
+15,medium,trivia,"Which Star Wars video game series, featuring a customizable Jedi character, is set during the Old Republic era?",2,1,-2
+16,easy,trivia,What is the title of the first movie in the Skywalker Saga?,1,2,1
+17,medium,trivia,"Which Star Wars Disney+ series introduced the character of Grogu, often referred to as ""Baby Yoda""?",1,2,2
+18,hard,trivia,How does the timeline of The Acolyte relate to the events of the High Republic publishing initiative?,1,2,-2
+19,hard,trivia,What key event marks the transition between the High Republic era and the events leading into the prequel trilogy?,-2,-2,-2
